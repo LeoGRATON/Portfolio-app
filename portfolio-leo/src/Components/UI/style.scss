@@ -1,0 +1,31 @@
+@use '../../styles/vars';
+
+.menu{
+    display: flex;
+    justify-content: center;
+}
+.menu-lists{
+    display: flex;
+    gap: 4rem;
+    height: 4rem;
+    align-items: center;
+    background: rgba(249, 249, 249, 0.05);
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    padding: 0 2rem;
+    position: absolute;
+    left: calc(50% - 686px/2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    .menu-list-active{
+        background-color: vars.$or;;
+        padding: 0.9rem;
+        border-radius: 5px;
+    }
+    .menu-list-select{
+        background: none;
+        border: none;
+        color: white;
+        font-family: 'Poppins';
+    }
+}
