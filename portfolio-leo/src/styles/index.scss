@@ -7,4 +7,157 @@ body{
     font-family: 'Poppins';
     background-color: vars.$dark;
     color: vars.$white;
+    overflow-x: hidden;
+}
+.taille-grille{
+    width: 1442px;
+    margin: auto;
+}
+.section-padding{
+    padding-bottom: 120px;
+}
+
+// HOME -- HERO
+.hero{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        font-size: 85px;
+        text-align: center;
+        margin-top: -4rem;
+        line-height: 1.2;
+        span{
+            font-family: 'Prata';
+            font-size: 73px;
+            color: vars.$or;
+        }
+    }
+}
+
+// HOME -- SELECTED WORKS
+.selected-works-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    padding: 5rem 0 5rem;
+    border-bottom: 1px solid vars.$white;
+    h2{
+        font-size: 32px;
+        line-height: 1.6;
+    }
+}
+.selected-works-one{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0 4rem;
+    border-bottom: 1px solid vars.$white;
+    h3{
+        font-size: 80px;
+        font-family: 'Prata';
+        line-height: 1.4;
+    }
+    &-pagination{
+        font-size: 80px;
+        font-family: 'Prata';
+    }
+    p{
+        color: vars.$grey;
+        text-transform: uppercase;
+    }
+}
+.hovered-image{
+    position: absolute;
+    overflow: hidden;
+}
+.selected-works-full:hover{
+    background-color: vars.$white;
+    cursor: pointer;
+    .selected-works-one{
+        h3{
+            color: vars.$or;
+        }
+        &-pagination{
+            color: vars.$dark;
+        }
+        p{
+            color: vars.$dark;
+        }
+    }
+}
+
+// HOME -- SECTION ABOUT
+
+.cards{
+    display: flex;
+    gap: 1rem;
+    margin-top: -3rem;
+    padding-bottom: 4rem;
+    .card{
+        padding: 3rem;
+        background-color: vars.$darky;
+        border-radius: 5px;
+        span{
+            font-family: 'Prata';
+            font-size: 24px;
+        }
+        h2{
+            font-family: 'Prata';
+            font-size: 32px;
+            line-height: 1.6;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 200;
+            line-height: 1.4;
+        }
+    }
+}
+.about-section-quote{
+    display: flex;
+    align-items: center;
+    padding-bottom: 4rem;
+    &-right{
+        width: 50%;
+        p{
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+    }
+    &-left{
+        width: 50%;
+        p{
+            font-size: 24px;
+            font-family: 'Prata';
+            line-height: 1.5;
+            width: 80%;
+            margin-top: -2rem;
+        }
+    }
+}
+.about-section-btn{
+    display: flex;
+    justify-content: center;
+}
+
+// HOME -- SECTION ABOUT
+
+.client-card{
+    background-color: vars.$darky;
+    padding: 3rem;
+    border-radius: 5px;
+    .client-card-info{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+.client-section-cards{
+    display: flex;
+    gap: 1rem;
 }
