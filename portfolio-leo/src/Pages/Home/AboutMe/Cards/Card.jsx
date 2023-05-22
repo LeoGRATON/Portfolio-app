@@ -6,7 +6,7 @@ const Card = ({number, title, description}) => {
     return (
         <div className='card'>
             <span>{number}</span>
-            <h2>{title}</h2>
+            <h3>{title}</h3>
             <p>{description}</p>
             <Moreinfo/>
         </div>

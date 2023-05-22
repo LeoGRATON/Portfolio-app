@@ -1,0 +1,97 @@
+@use '../../../styles/vars';
+
+.infos-about{
+    margin-top: 10rem;
+    display: flex;
+    gap: 1rem;
+    h1{
+        font-family: 'Prata';
+        font-size: 85px;
+        line-height: 1.5;
+    }
+    p{
+        font-weight: 300;
+        line-height: 1.5;
+        width: 70%;
+    }
+}
+.scrolling-image{
+    position: sticky;
+    top: 10%;
+    height: 800px; /* Ajustez la hauteur selon vos besoins */
+}
+.infos-about-link{
+    display: flex;
+    gap: 3rem;
+    padding-top: 3rem;
+}
+
+.link-about-icon{
+    border: 1px solid vars.$white;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.link-about-infos-nom{
+    text-transform: uppercase;
+    font-weight: 300;
+    color: vars.$grey;
+}
+.link-about{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.infos-about-infos{
+    border: 1px solid vars.$white;
+    border-radius: 5px;
+    background-color: vars.$darky;
+    padding: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 120px;
+    h2{
+        font-size: 24px;
+        font-family: 'Prata';
+        margin-top:-1.8rem;
+        padding-bottom: 2rem;
+    }
+    &-p{
+        width: 100% !important;
+        line-height: 1.5;
+    }
+}
+
+.card-cv-name{
+    display: flex;
+    flex-direction: column;
+    h2{
+        font-size: 32px;
+        font-family: 'Prata';
+        margin-bottom: -2rem;
+    }
+    span{
+        font-size: 120px;
+        font-family: 'Prata';
+        opacity: .05;
+    }
+}
+.card-cv-last{
+    padding-bottom: 120px;
+}
+.card-cv-card{
+    background-color: vars.$darky;
+    border: 1px solid vars.$white;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    padding: 3rem;
+    h3{
+        margin: 2rem 0 2rem;
+    }
+    p{
+        width: 100%;
+    }
+}

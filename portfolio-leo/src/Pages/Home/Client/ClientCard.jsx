@@ -1,12 +1,32 @@
+import Icon from 'react-eva-icons'
+
+import quote from '../../../assets/quote.svg'
 import '../../../styles/index.scss'
 
-const ClientCard = ({imgSrc, title, testimonial, imgClient, clientName, clientDescriptionName}) => {
+const ClientCard = ({title, testimonial, imgClient, clientName, clientDescriptionName, iconCount}) => {
+
+    const icons = [];
+
+    for (let i=0; i < iconCount; i++) {
+        icons.push(
+            <Icon 
+                name="star"
+                size="medium"
+                fill="#CCA43B"
+            />
+        )
+    }
 
     return (
         <div className='client-card'>
-            <img src={imgSrc} alt="" />
+            <div>
+                {icons}
+            </div>
             <h3>{title}</h3>
-            <p>{testimonial}</p>
+            <div className='client-card-text'>
+                <img src={quote} alt="" />
+                <p>{testimonial}</p>
+            </div>
             <div className='client-card-info'>
             <div>
                 <img src={imgClient} alt="" />

@@ -92,10 +92,21 @@ body{
 
 // HOME -- SECTION ABOUT
 
+.filigrane-about-me{
+    z-index: -1;
+    position: relative;
+    h2{
+        margin-left: 1rem;
+        font-size: 170px;
+        font-family: 'Prata';
+        opacity: .05;
+    }
+}
+
 .cards{
     display: flex;
     gap: 1rem;
-    margin-top: -3rem;
+    margin-top: -4rem;
     padding-bottom: 4rem;
     .card{
         padding: 3rem;
@@ -105,8 +116,9 @@ body{
             font-family: 'Prata';
             font-size: 24px;
         }
-        h2{
+        h3{
             font-family: 'Prata';
+            list-style: 1.5;
             font-size: 32px;
             line-height: 1.6;
         }
@@ -173,6 +185,9 @@ body{
     background-color: vars.$darky;
     padding: 3rem;
     border-radius: 5px;
+    .client-card-text{
+        padding-bottom: 1rem;
+    }
     .client-card-info{
         display: flex;
         align-items: center;
@@ -182,9 +197,14 @@ body{
     h3{
         font-family: 'Prata';
         font-size: 24px;
+        line-height: 1.4;
         margin: 1.2rem 0 1.2rem;
     }
+    img{
+        width: 40px;
+    }
     p{
+        margin-top: -1.5rem;
         font-size: 16px;
         font-weight: 300;
         line-height: 1.5;
@@ -203,4 +223,61 @@ body{
     justify-content: center;
     gap: 8rem;
     opacity: 0.3;
+}
+
+// BLOG -- SECTION INPUT
+.blog-input{
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 120px;
+    &-content{
+        width: 50%;
+        label{
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            margin-top: 0.5rem;
+            border: 1px solid vars.$white;
+            border-radius: 5px;
+            height: 50px;
+            background: none;
+            font-family: 'Poppins';
+            padding-left: 1rem;
+            color: vars.$white;
+        }
+        select{
+            margin-top: 0.5rem;
+            border: 1px solid vars.$white;
+            border-radius: 5px;
+            height: 50px;
+            background: none;
+            font-family: 'Poppins';
+            padding-left: 1rem;
+            color: vars.$white;
+        }
+    }
+}
+.blog{
+    display: flex;
+}
+.blog-card{
+    .categorie{
+        padding: 1.3rem 0 1.3rem;
+        text-transform: uppercase;
+        opacity: .5;
+    }
+    h2{
+        font-family: 'Prata';
+        font-size: 24px;
+        line-height: 1.3;
+        padding-bottom: 1.3rem;
+    }
+    .text{
+        font-weight: 300;
+        line-height: 1.5;
+    }
+    img{
+        width: 468px;
+    }
 }

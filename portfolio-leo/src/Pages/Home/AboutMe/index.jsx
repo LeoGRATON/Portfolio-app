@@ -1,7 +1,6 @@
 import Cards from './Cards/Cards';
 
 import '../../../styles/index.scss'
-import aboutme from '../../../assets/about-me.svg'
 import quote from '../../../assets/quote.svg'
 import Button from '../../../Components/UI/Button';
 
@@ -9,8 +8,10 @@ const AboutMe = () => {
 
     return (
         <div className='about-section taille-grille section-padding'>
-            <div className='filigrane-about-me'>
-                <img src={aboutme} alt="" />
+            <div>
+                <div className='filigrane-about-me'>
+                    <h2>About me</h2>
+                </div>
                 <Cards/>
             </div>
             <div className='about-section-quote'>

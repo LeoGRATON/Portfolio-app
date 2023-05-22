@@ -4,8 +4,8 @@ import SelectedWork from './SeletedWork';
 import AboutMe from './AboutMe';
 import Client from './Client';
 import SliderLogo from './SliderLogo';
-import Contact from '../../Components/UI/Contact';
-import Footer from '../../Components/UI/Footer'
+import Contact from '../../Components/Contact';
+import Footer from '../../Components/Footer'
 
 import '../../styles/index.scss'
 import '../../styles/responsive.scss'
