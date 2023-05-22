@@ -1,10 +1,12 @@
+import Menu from '../../Components/UI/Menu';
+
 import '../../styles/index.scss'
 
 const Blogs = () => {
 
     return (
         <div>
-            <h1>Page Blogs</h1>
+            <Menu/>
         </div>
     )
 };

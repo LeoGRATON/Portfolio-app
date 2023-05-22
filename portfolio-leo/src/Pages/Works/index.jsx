@@ -1,10 +1,12 @@
+import Menu from '../../Components/UI/Menu';
+
 import '../../styles/index.scss'
 
 const Works = () => {
 
     return (
         <div>
-            <h1>Page Works</h1>
+            <Menu/>
         </div>
     )
 };

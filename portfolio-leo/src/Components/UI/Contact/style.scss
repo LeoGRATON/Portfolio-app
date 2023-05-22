@@ -1,0 +1,86 @@
+@use '../../../styles/vars';
+
+.contact-message{
+    padding: 1rem 0 1rem;
+    border-top: 2px solid vars.$or;
+    border-bottom: 2px solid vars.$or;
+}
+.contact-section{
+    background-color: vars.$white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-section-title{
+    padding-top: 120px;
+    h2{
+        font-size: 85px;
+        color: vars.$dark;
+        text-align: center;
+        padding-bottom: 2rem;
+        span{
+            font-family: 'Prata';
+            color: vars.$or;
+        }
+    }
+    p{
+        font-size: 16px;
+        font-weight: 300;
+        color: vars.$dark;
+        text-align: center;
+        line-height: 1.5;
+        width: 50%;
+        margin: auto;
+    }
+}
+
+form{
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    .form-input{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    input{
+        border: 1px solid vars.$dark;
+        border-radius: 5px;
+        height: 50px;
+        padding-left: 1rem;
+        font-family: 'Poppins';
+        font-weight: 300;
+    }
+    select{
+        border: 1px solid vars.$dark;
+        border-radius: 5px;
+        height: 50px;
+        padding-left: 1rem;
+        font-family: 'Poppins';
+        font-weight: 300;
+    }
+    textarea{
+        border: 1px solid vars.$dark;
+        border-radius: 5px;
+        min-height: 160px;
+        max-width: 100%;
+        min-width: 100%;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        font-family: 'Poppins';
+        font-weight: 300;
+    }
+    label{
+        color: vars.$dark;
+        padding-bottom: 0.7rem;
+    }
+    .checkbox{
+        width: 50%;
+        display: flex;
+        width: 50%;
+        align-items: center;
+        gap: 1rem;
+    }
+}

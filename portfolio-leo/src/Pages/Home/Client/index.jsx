@@ -10,6 +10,10 @@ const Client = () => {
 
     return (
         <div className='client-section taille-grille section-padding'>
+            <div className='client-section-title'>
+                <h2>What my<br/><span>client say ?</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed erat sem. Proin turpis est, lobortis in nisl ac.</p>
+            </div>
             <div className='client-section-cards'>
                 <ClientCard
                 imgSrc={`${image}/logo-1.svg`}

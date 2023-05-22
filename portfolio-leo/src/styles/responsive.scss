@@ -1,0 +1,59 @@
+
+@media screen and (max-width: 1450px) {
+    .taille-grille {
+        width: 1000px;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .taille-grille {
+        width: 800px;
+        margin: auto;
+    }
+    .selected-works-one h3 {
+        font-size: 58px;
+    }
+    .cards {
+        flex-direction: column;
+        margin-top: -2rem;
+    }
+    .filigrane-about-me{
+        img{
+            width: 650px;
+        }
+    }
+}
+@media screen and (max-width: 875px) {
+    .taille-grille {
+        width: 80%;
+    }
+    .selected-works-one h3 {
+        font-size: 58px;
+    }
+    .about-section-quote {
+        flex-direction: column;
+    }
+    .about-section-quote-left {
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    .about-section-quote-right {
+        width: 100%;
+    }
+    .client-section-cards {
+        flex-direction: column;
+    }
+    form .form-input {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .filigrane-about-me{
+        img{
+           display: none;
+        }
+    }
+    form .checkbox {
+        width: 100%;
+    }
+}

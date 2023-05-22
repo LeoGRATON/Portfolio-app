@@ -16,7 +16,6 @@
     border-radius: 5px;
     padding: 0 1rem;
     position: absolute;
-    left: calc(50% - 686px/2);
     text-transform: uppercase;
     letter-spacing: 1px;
     .menu-list-active{
@@ -46,6 +45,17 @@
     background: vars.$white;
     border-left: 3px solid vars.$or;
     color: vars.$or;
+    border-top: 1px solid vars.$white;
+    border-bottom: 1px solid vars.$white;
+}
+.btn-contact{
+    color: vars.$dark;
+    border: 1px solid vars.$dark;
+}
+.btn-contact:hover{
+    border: none;
+    background: vars.$or;
+    color: vars.$white;
     border-top: 1px solid vars.$white;
     border-bottom: 1px solid vars.$white;
 }

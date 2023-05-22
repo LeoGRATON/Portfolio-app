@@ -1,26 +1,30 @@
-import { Link } from 'react-router-dom'
-
-import './style.scss'
+import { useLocation } from 'react-router-dom';
+import './style.scss';
 
 const Menu = () => {
+    const location = useLocation();
 
     return (
         <div className='menu'>
             <ul className='menu-lists'>
-                <Link to='/'><li className='menu-list-active'>Home</li></Link>
-                <Link to='/works'><li>Works</li></Link>
-                <Link to='/about-me'><li>About me</li></Link>
-                <Link to='/blogs'><li>Blog</li></Link>
-                <Link to='#'><li>Contact</li></Link>
-                <li>
-                    <select name="langue" id="langue" className='menu-list-select'>
-                        <option value="english">EN</option>
-                        <option value="french">FR</option>
-                    </select>
+                <li className={location.pathname === '/' ? 'menu-list-active' : ''}>
+                    <a href='/'>Home</a>
+                </li>
+                <li className={location.pathname === '/works' ? 'menu-list-active' : ''}>
+                    <a href='/works'>Works</a>
+                </li>
+                <li className={location.pathname === '/about-me' ? 'menu-list-active' : ''}>
+                    <a href='/about-me'>About me</a>
+                </li>
+                <li className={location.pathname === '/blogs' ? 'menu-list-active' : ''}>
+                    <a href='/blogs'>Blog</a>
+                </li>
+                <li className={location.pathname === '/contact' ? 'menu-list-active' : ''}>
+                    <a href='#contact'>Contact</a>
                 </li>
             </ul>
         </div>
-    )
+    );
 };
 
 export default Menu;

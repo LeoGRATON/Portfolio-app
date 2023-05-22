@@ -1,9 +1,9 @@
 import './style.scss'
 
-const Button = ({className, onClick, children}) => {
+const Button = ({className, onClick, children, type}) => {
 
     return (
-        <button className={`btn ${className}`} onClick={onClick}>{children}</button>
+        <button className={`btn ${className}`} type={type} onClick={onClick}>{children}</button>
     )
 };
 

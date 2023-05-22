@@ -9,7 +9,7 @@ const AboutMe = () => {
 
     return (
         <div className='about-section taille-grille section-padding'>
-            <div>
+            <div className='filigrane-about-me'>
                 <img src={aboutme} alt="" />
                 <Cards/>
             </div>
