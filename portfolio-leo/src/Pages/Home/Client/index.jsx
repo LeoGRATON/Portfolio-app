@@ -10,8 +10,8 @@ const Client = () => {
     return (
         <div className='client-section taille-grille section-padding'>
             <div className='client-section-title'>
-                <h2>What my<br/><span>client say ?</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed erat sem. Proin turpis est, lobortis in nisl ac.</p>
+                <h2>Que disent<br/><span>mes clients ?</span></h2>
+                <p>Ces témoignages sont issus principalement des avis récoltés sur Google suite à un projet ou à des travaux réalisés en équipe.</p>
             </div>
             <div className='client-section-cards'>
                 <ClientCard
@@ -19,7 +19,7 @@ const Client = () => {
                 imgSrc={`${image}/logo-1.svg`}
                 title='Création d’un interface de gestion de cuisine ou restaurant'
                 testimonial='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget ipsum in neque gravida dignissim. Pellentesque quam risus, facilisis nec dolor eget, semper ultrices velit. Integer luctus lobortis tortor ut pellentesque. Vivamus ultricies tortor mattis, vestibulum orci sit amet, vestibulum purus. Phasellus eget vulputate libero. Proin accumsan libero sed nisl placerat, non placerat nisi rhoncus. '
-                imgClient={`${image}/client-exemple-1.png`}
+                imgClient={`${image}/client-exemple-1.png`} 
                 clientName='John Doe'
                 clientDescriptionName='Entrepreneur chez Cuist’o'
                 />
@@ -34,7 +34,7 @@ const Client = () => {
                 />
             </div>
             <div className='about-section-btn'>
-                <Button children='More testimonials'/>
+                <Button children='Voir tous mes avis'/>
             </div>
         </div>
     )

@@ -16,6 +16,7 @@ const Infos = () => {
                     <img src={imgleo} alt="" />
                 </div>
             <div>
+                <div className='infos-about-nom'>
                 <h1>Léo<br/>GRATON</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula eget ligula sagittis, sed efficitur turpis egestas. Nam sed mi eleifend. (Poppins)</p>
                 <div className='infos-about-link'>
@@ -23,6 +24,7 @@ const Infos = () => {
                 <Link nom='Github' pseudo='LeoGRATON'/>
                 <Link nom='Github' pseudo='LeoGRATON'/>
                 <Link nom='Github' pseudo='LeoGRATON'/>
+                </div>
                 </div>
 
                 <div className='infos-about-infos section-padding'>

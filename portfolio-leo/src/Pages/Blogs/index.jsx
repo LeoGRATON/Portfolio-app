@@ -9,6 +9,7 @@ import imgarticle from '../../assets/BLOG/img-article-1.png'
 
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Loading from '../../Components/UI/Loading';
 
 
 const Blogs = () => {
@@ -25,6 +26,7 @@ const Blogs = () => {
             console.error('Une erreur s\'est produite lors de la récupération des travaux :', error);
           });
       }, []);
+
 
     return (
         <div>
@@ -45,6 +47,9 @@ const Blogs = () => {
                     Filtrer par catégorie :
                     <select type="text">
                         <option value="default">-- Selectionner un catégorie --</option>
+                        {blogs.map((blog) => (
+                            <option value="default">{blog.category}</option>
+                        ))}
                     </select>
                 </label>
                 </div>
@@ -53,7 +58,9 @@ const Blogs = () => {
                 {blogs.map((blog) => (
                     <div className='blog-cards' key={blog.id}>
                     <div className='blog-card'>
-                        <img src={imgarticle} alt="" />
+                        <div className='blog-card-img' style={{ backgroundImage: `url(${imgarticle})`}}>
+
+                        </div>
                         <p className='categorie'>{blog.category}</p>
                         <h2>{blog.titre}</h2>
                         <p className='text'>{blog.text}</p>
@@ -62,6 +69,7 @@ const Blogs = () => {
                     </div>
                 ))}
             </div>
+
             <Footer/>
         </div>
     )

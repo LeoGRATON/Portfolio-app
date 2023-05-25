@@ -1,5 +1,6 @@
 import Cards from './Cards/Cards';
 
+import {Link} from 'react-router-dom'
 import '../../../styles/index.scss'
 import quote from '../../../assets/quote.svg'
 import Button from '../../../Components/UI/Button';
@@ -24,7 +25,7 @@ const AboutMe = () => {
                 </div>
             </div>
             <div className='about-section-btn'>
-                <Button children='More infos'/>
+                <a href='/about-me'><Button children='Me découvrir'/></a>
             </div>
         </div>
     )

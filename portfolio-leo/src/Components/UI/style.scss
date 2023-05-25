@@ -18,6 +18,9 @@
     position: absolute;
     text-transform: uppercase;
     letter-spacing: 1px;
+    .menu-burger{
+        display: none;
+    }
     .menu-list-active{
         background-color: vars.$or;;
         padding: 0.9rem;
@@ -28,6 +31,36 @@
         border: none;
         color: white;
         font-family: 'Poppins';
+    }
+}
+.menu-overlay{
+    background-color: vars.$dark;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    margin-top: -4rem;
+    display: flex;
+    align-items: center;
+    padding-left: 4rem;
+    .overlay-menu-list, .overlay-menu-list-active{
+        margin-bottom: 2rem;
+    }
+}
+.overlay-menu-lists-close{
+    margin-bottom: 2rem;
+    i{
+    border: 1px solid vars.$white;
+    padding: 1rem;
+    border-radius: 50px;
+    }
+    i:hover{
+        border: 1px solid vars.$white;
+        background-color: vars.$white;
+        cursor: pointer;
+        svg{
+            fill: vars.$dark;
+        }
     }
 }
 
