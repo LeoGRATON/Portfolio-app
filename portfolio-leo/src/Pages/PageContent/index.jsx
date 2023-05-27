@@ -10,8 +10,9 @@ import UIDesign from './UIDesign';
 const PageContent = ({titre, h2, h2Text, imgName, ConclusionText, content}) => {
 
   return (
-    <div>
+    <>
         <Menu/>
+        <main>
         <PageTitle 
             title={titre}
         />
@@ -34,8 +35,9 @@ const PageContent = ({titre, h2, h2Text, imgName, ConclusionText, content}) => {
             <p>{ConclusionText}</p>
         </div>
         <Contact/>
+        </main>
         <Footer/>
-    </div>
+    </>
   );
 };
 

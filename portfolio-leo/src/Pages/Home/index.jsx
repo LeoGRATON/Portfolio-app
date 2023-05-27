@@ -13,16 +13,18 @@ import '../../styles/responsive.scss'
 const Home = () => {
 
     return (
-        <div>
+        <>
             <Menu/>
             <Hero/>
-            <SelectedWork/>
-            <AboutMe/>
-            <Client/>
-            <SliderLogo/>
-            <Contact/>
+            <main>
+                <SelectedWork/>
+                <AboutMe/>
+                <Client/>
+                <SliderLogo/>
+                <Contact/>
+            </main>
             <Footer/>
-        </div>
+        </>
     )
 };
 

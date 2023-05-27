@@ -15,7 +15,7 @@ const Menu = () => {
     return (
         <div>
           {isOpen && (
-                <div className='menu-overlay'>
+                <nav className='menu-overlay'>
                     <ul className='overlay-menu-lists'>
                         <li className='overlay-menu-lists-close' onClick={handleMenuBurger}>
                             <Icon
@@ -39,10 +39,10 @@ const Menu = () => {
                         <li className={location.pathname === '/contact' ? 'overlay-menu-list-active' : 'overlay-menu-list'}>
                             <a href='#contact'>Contact</a>
                         </li>
-                    </ul>
-                </div>
+                    </ul>   
+                </nav>
             )}  
-        <div className='menu'>
+        <nav className='menu'>
             <ul className='menu-lists'>
                 <li className='menu-burger' onClick={handleMenuBurger}>
                     <Icon
@@ -67,7 +67,7 @@ const Menu = () => {
                     <a href='#contact'>Contact</a>
                 </li>
             </ul>
-        </div>
+        </nav>
     </div>
     );
 };

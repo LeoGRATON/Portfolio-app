@@ -9,7 +9,8 @@ const ClientCard = ({title, testimonial, imgClient, clientName, clientDescriptio
 
     for (let i=0; i < iconCount; i++) {
         icons.push(
-            <Icon 
+            <Icon
+                key={i}
                 name="star"
                 size="medium"
                 fill="#CCA43B"

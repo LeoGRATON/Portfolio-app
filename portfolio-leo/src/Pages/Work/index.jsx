@@ -1,7 +1,8 @@
 import '../../styles/index.scss'
 import { useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
+import { Helmet } from 'react-helmet';
 
 import Menu from '../../Components/UI/Menu';
 import PageTitle from '../../Components/PageTitle';
@@ -9,6 +10,9 @@ import WorkInfo from './WorkInfo';
 import Contact from '../../Components/Contact';
 import Footer from '../../Components/Footer';
 import Loading from '../../Components/UI/Loading';
+import SlideUpFadeIn from '../../Components/Animation/SlidenUpFadeIn';
+import SlideLeftFadeIn from '../../Components/Animation/SlideLeftFadeIn';
+import OpacityText from '../../Components/Animation/OpacityText';
 
 const Work = () => {
   const { titre } = useParams();
@@ -31,26 +35,37 @@ const Work = () => {
   }
 
   return (
-    <div>
+    <>
+        <Helmet>
+                <title>{titre} | LéoCreative Studio</title>
+                <meta name="description" content="Description de ma page" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="robots" content="index, follow" />
+            </Helmet>
         <Menu/>
+        <main>
         <PageTitle 
             title={titre}
             descriptionPage='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula eget ligula sagittis, sed efficitur turpis egestas. Nam sed mi eleifend. (Poppins)'
         />
+        <SlideUpFadeIn height='-100'>
         <div className='work-info-cards'>
             <WorkInfo nomInfo='Client' children={work.titre}/>
             <WorkInfo nomInfo='Timeline' children={`${work.timeline}s`}/>
             <WorkInfo nomInfo='Website' children={work.website}/>
             <WorkInfo nomInfo='Category' children={work.category}/>
         </div>
+        </SlideUpFadeIn>
         <div className='one-realistion taille-grille'>
+            <SlideLeftFadeIn height='-100'>
             <div className='one-realistion-img' style={{ backgroundImage: `url(/src/assets/REALISATONS/${work.img_ref})`}}></div>
+            </SlideLeftFadeIn>
             <div className='one-realistion-presentation section-padding'>
-                <div className='one-realistion-presentation-left'>
+                <SlideLeftFadeIn height='1000' className='one-realistion-presentation-left'>
                     <h2>Présentation du projet</h2>
                     <p>{work.description}</p>
-                </div>
-                <div className='one-realistion-presentation-right'>
+                </SlideLeftFadeIn>
+                <SlideUpFadeIn height='1000' className='one-realistion-presentation-right'>
                     <div className='one-realistion-presentation-right-challenge'>
                     <h3>Le Challenge</h3>
                     <p>{work.challenge}</p>
@@ -63,19 +78,23 @@ const Work = () => {
                     <h3>Le resultat</h3>
                     <p>{work.result}</p>
                     </div>
-                </div>
+                </SlideUpFadeIn>
             </div>
             <div className='filigrane'>
+                <SlideUpFadeIn height='1800'>
                 <h2>Maquette</h2>
+                </SlideUpFadeIn>
             </div>
         </div>
         <div className='one-realistion-maquette'>
             <div className='one-realistion-maquette-img'>
-            <img src={`/src/assets/REALISATONS/MAQUETTES/${work.img_maquette}`} alt="" />
+                <OpacityText height='2100'>
+                <img src={`/src/assets/REALISATONS/MAQUETTES/${work.img_maquette}`} alt='' />
+                </OpacityText>
             </div>
         </div>
         <div className='one-realistion-couleurs taille-grille'>
-            <div className='one-realistion-couleurs-left' >
+            <SlideLeftFadeIn height='5900' className='one-realistion-couleurs-left'>
             <div className='one-realistion-couleurs-left-one' style={{ backgroundColor: `${work.couleurs.couleur1.hex}`}}>
             {work.couleurs.couleur1.nom}<br/>
             {work.couleurs.couleur1.hex}
@@ -92,8 +111,8 @@ const Work = () => {
             {work.couleurs.couleur4.nom}<br/>
             {work.couleurs.couleur4.hex}
             </div>
-            </div>
-            <div className='one-realistion-couleurs-right'>
+            </SlideLeftFadeIn>
+            <SlideUpFadeIn height='5900' className='one-realistion-couleurs-right'>
                 <div>
                     <p>{work.typo1}</p>
                     <span>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz 1234567890 !$&)ç((-</span>
@@ -102,11 +121,12 @@ const Work = () => {
                     <p>{work.typo2}</p>
                     <span>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz 1234567890 !$&)ç((-</span>
                 </div>
-            </div>
+            </SlideUpFadeIn>
         </div>
         <Contact/>
+        </main>
         <Footer/>
-    </div>
+    </>
   );
 };
 

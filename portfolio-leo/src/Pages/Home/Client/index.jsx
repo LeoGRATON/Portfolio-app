@@ -1,7 +1,9 @@
 import Button from '../../../Components/UI/Button';
 import ClientCard from './ClientCard';
+import AppearTextInBackground from '../../../Components/Animation/AppearTextInBackground';
 
 import '../../../styles/index.scss'
+import SlideUpFadeIn from '../../../Components/Animation/SlidenUpFadeIn';
 
 const Client = () => {
 
@@ -9,11 +11,14 @@ const Client = () => {
 
     return (
         <div className='client-section taille-grille section-padding'>
+            <AppearTextInBackground>
             <div className='client-section-title'>
-                <h2>Que disent<br/><span>mes clients ?</span></h2>
+                <h2><span className='white poppins'>Que disent</span><br/><span>mes clients ?</span></h2>
                 <p>Ces témoignages sont issus principalement des avis récoltés sur Google suite à un projet ou à des travaux réalisés en équipe.</p>
             </div>
+            </AppearTextInBackground>
             <div className='client-section-cards'>
+                <SlideUpFadeIn height='2600'>
                 <ClientCard
                 iconCount={5}
                 imgSrc={`${image}/logo-1.svg`}
@@ -23,6 +28,8 @@ const Client = () => {
                 clientName='John Doe'
                 clientDescriptionName='Entrepreneur chez Cuist’o'
                 />
+                </SlideUpFadeIn>
+                <SlideUpFadeIn height='2600'>
                 <ClientCard
                 iconCount={5}
                 imgSrc={`${image}/logo-2.svg`}
@@ -32,6 +39,7 @@ const Client = () => {
                 clientName='Marie Doe'
                 clientDescriptionName='Créatrice de mode'
                 />
+                </SlideUpFadeIn>
             </div>
             <div className='about-section-btn'>
                 <Button children='Voir tous mes avis'/>

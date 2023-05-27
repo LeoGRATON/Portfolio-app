@@ -4,7 +4,7 @@ import './style.scss'
 const Footer = () => {
 
     return (
-        <div className='footer'>
+        <footer className='footer'>
             <p>Made by <span>Léo GRATON</span> 2023</p>
             <a href="#" className='footer-link'>Plan du site</a>
             <a href="https://github.com/LeoGRATON" target="_blanck" className='footer-social'>
@@ -43,7 +43,7 @@ const Footer = () => {
                   }}
             />
             </a>
-        </div>
+        </footer>
     )
 };
 

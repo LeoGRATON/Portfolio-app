@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Moreinfo from '../../../../Components/UI/Moreinfo';
-import '../../../../styles/index.scss';
 
-const Card = ({ number, title, description, url }) => {
+import './Animation.scss';
+
+const AppearTextInBackground = ({ children, className }) => {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef(null);
 
@@ -20,13 +20,10 @@ const Card = ({ number, title, description, url }) => {
   }, []);
 
   return (
-    <div ref={cardRef} className={`card ${isVisible ? '' : 'visible'}`}>
-      <span>{number}</span>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <a href={url}><Moreinfo/></a>
+    <div ref={cardRef} className={`${className} appear-text ${isVisible ? '' : 'visible'}`}>
+     {children}
     </div>
   );
 };
 
-export default Card;
+export default AppearTextInBackground;

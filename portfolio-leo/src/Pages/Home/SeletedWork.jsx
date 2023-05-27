@@ -9,12 +9,11 @@ import '../../styles/index.scss';
 
 const SelectedWork = () => {
   const [works, setWorks] = useState([]);
-  const [selectedWork, setSelectedWork] = useState(4);
   const [hoveredImage, setHoveredImage] = useState(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [scrollHeight, setScrollHeight] = useState(0);
   const [isLoading, setIsLoading] = useState(true); // Nouvelle variable d'état
-
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     axios
@@ -30,7 +29,8 @@ const SelectedWork = () => {
         const height = window.scrollY;
         setScrollHeight(height);
       };
-  
+
+      setIsVisible(true);
       window.addEventListener('scroll', handleScroll);
   
       return () => {
@@ -62,19 +62,19 @@ const SelectedWork = () => {
         <Loading />
       ) : (
         <>
-      <div className='selected-works-title taille-grille'>
+      <div className={`selected-works-title taille-grille`}>
         <div>
-          <h2>Selected Works({selectedWork})</h2>
-          <p>A piece from my selection of favorites</p>
+          <h2>Selected Works</h2>
+          <p>Une sélection non exhaustives de mes réalisations</p>
         </div>
         <a href='/works'>
           <Button children='All Works' />
         </a>
       </div>
       <div>
-        {works.slice(0, selectedWork).map((work, index) => (
-          <Link to={`/works/${work.titre}`}>
-          <div className='selected-works-full'>
+        {works.slice(0, 4).map((work, index) => (
+          <Link to={`/works/${work.titre}`} key={work.id}>
+          <div className={`selected-works-full`} >
           <div
           className='selected-works-one taille-grille'
           key={work.id}

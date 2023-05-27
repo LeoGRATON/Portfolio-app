@@ -4,6 +4,8 @@ import CardCV from './CardCV'
 import imgleo from '../../../assets/ABOUTME/img-leo.png'
 import quote from '../../../assets/quote.svg'
 import './style.scss'
+import SlideUpFadeIn from '../../../Components/Animation/SlidenUpFadeIn'
+import AppearTextInBackground from '../../../Components/Animation/AppearTextInBackground'
 
 const Infos = () => {
 
@@ -16,8 +18,10 @@ const Infos = () => {
                     <img src={imgleo} alt="" />
                 </div>
             <div>
-                <div className='infos-about-nom'>
+                <SlideUpFadeIn height='-100' className='infos-about-nom'>
+                <AppearTextInBackground>
                 <h1>Léo<br/>GRATON</h1>
+                </AppearTextInBackground>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula eget ligula sagittis, sed efficitur turpis egestas. Nam sed mi eleifend. (Poppins)</p>
                 <div className='infos-about-link'>
                 <Link nom='Github' pseudo='LeoGRATON'/>
@@ -25,9 +29,8 @@ const Infos = () => {
                 <Link nom='Github' pseudo='LeoGRATON'/>
                 <Link nom='Github' pseudo='LeoGRATON'/>
                 </div>
-                </div>
-
-                <div className='infos-about-infos section-padding'>
+                </SlideUpFadeIn>
+                <SlideUpFadeIn height='200' className='infos-about-infos section-padding'>
                 <div>
                 <div className='infos-about-infos-quote'>
                 <img src={quote} alt="" />
@@ -35,7 +38,8 @@ const Infos = () => {
                 </div>
                 <p className='infos-about-infos-p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed erat sem. Proin turpis est, lobortis in nisl ac, vehicula lobortis erat. Etiam varius urna sit amet lectus feugiat viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed erat sem. Proin turpis est, lobortis in nisl ac, vehicula lobortis erat. Etiam varius urna sit amet lectus feugiat viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed erat sem. Proin turpis est, lobortis in nisl ac, vehicula lobortis erat. Etiam varius urna sit amet lectus feugiat viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed erat sem. Proin turpis est, lobortis in nisl ac, vehicula lobortis erat. Etiam varius urna sit amet lectus feugiat viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed erat sem. Proin turpis est, lobortis in nisl ac, vehicula lobortis erat. Etiam varius urna sit amet lectus feugiat viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed erat sem. Proin turpis est, lobortis in nisl ac, vehicula lobortis erat. Etiam varius urna sit amet lectus feugiat viverra. </p>
                 </div>
-                </div>
+                </SlideUpFadeIn>
+                <SlideUpFadeIn height='500'>
                 <CardCV
                 nom='Experience'
                 imglogo={`${image}/logo-nc.png`}
@@ -53,6 +57,8 @@ const Infos = () => {
                 className='card-cv-last'
                 description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula eget ligula sagittis, sed efficitur turpis egestas.  Nam sed mi eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
                 />
+                </SlideUpFadeIn>
+                <SlideUpFadeIn height='1400'>
                 <CardCV
                 nom='Education'
                 imglogo={`${image}/logo-nc.png`}
@@ -70,6 +76,8 @@ const Infos = () => {
                 description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula eget ligula sagittis, sed efficitur turpis egestas.  Nam sed mi eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
                 className='card-cv-last'
                 />
+                </SlideUpFadeIn>
+                <SlideUpFadeIn height='2400'>
                 <CardCV
                 nom='Skills'
                 titleName='Languages'
@@ -81,6 +89,7 @@ const Infos = () => {
                 titleName='UI / Webdesign'
                 className='card-cv-last'
                 />
+                </SlideUpFadeIn>
             </div>
             </div>
         </div>

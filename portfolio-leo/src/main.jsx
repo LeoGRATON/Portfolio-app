@@ -12,6 +12,7 @@ import PageContent from './Pages/PageContent';
 import UIDesign from './Pages/PageContent/UIDesign';
 import UXDesign from './Pages/PageContent/UXDesign';
 import Developpement from './Pages/PageContent/Developpement';
+import Article from './Pages/Article'
 
 import './styles/index.scss'
 
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: '/works/:titre',
     element: <Work />,
+  },
+  {
+    path: '/blogs/:titre',
+    element: <Article />,
   },
   {
     path: '/blogs',

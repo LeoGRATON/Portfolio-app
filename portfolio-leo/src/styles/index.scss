@@ -3,6 +3,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&display=swap');
 
+
+.white{
+    color: vars.$white !important;
+}
+.poppins{
+    font-family: 'Poppins' !important;
+}
 body{
     font-family: 'Poppins';
     background-color: vars.$dark;
@@ -292,6 +299,10 @@ body{
         width: 468px;
     }
 }
+.blog-card:hover{
+    transition: 0.5s ease-in;
+    transform: scale(0.97);
+}
 
 // WORKS
 
@@ -540,3 +551,126 @@ body{
         line-height: 1.5;
     }
 }
+
+// ANIMATION
+
+.hero {
+    opacity: 0;
+    transition: opacity 2.5s ease-in-out;
+  }
+  
+  .hero.visible {
+    opacity: 1;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .delayed-fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+  .appear-from-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  }
+  
+  .appear-from-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .slider-logo {
+    overflow: hidden;
+  }
+  
+  .slider-track {
+    display: flex;
+    animation: slideAnimation 15s linear infinite;
+  }
+  
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .last-child{
+    margin-right: 0 !important;
+  }
+  .slider-track img {
+    margin-right: 8rem; /* Ajoute un espacement entre les logos (ajustez la valeur selon vos besoins) */
+  }
+  .slide-reduce-background {
+    display: block;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slide-reduce-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100%;
+    background-color: white;
+    transition: left 1s ease-in-out;
+  }
+  
+  .slide-reduce-background:hover::before {
+    left: 0;
+  }
+
+  .card {
+    position: relative;
+  }
+  
+  .card h3 {
+    position: relative;
+    overflow: hidden;
+    color: vars.$white; /* Couleur du texte */
+  }
+  .card p {
+    position: relative;
+    overflow: hidden;
+    color: vars.$white; /* Couleur du texte */
+    margin-top: 1rem;
+  }
+  
+  .card h3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 100%;
+    background-color: white;
+    transition: right 1.5s ease-in-out;
+  }
+  .card p::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 100%;
+    background-color: white;
+    transition: right 1.5s ease-in-out;
+  }
+  
+  .card.visible h3::before {
+    right: 0;
+  }
+  .card.visible p::before {
+    right: 0;
+  }
