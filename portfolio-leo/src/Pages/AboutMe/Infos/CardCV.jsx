@@ -1,7 +1,7 @@
 
 import './style.scss'
 
-const CardCV = ({nom, imglogo, titleName, description, className}) => {
+const CardCV = ({nom, imglogo, titleName, description, className, altimg}) => {
 
     return (
         <div className={`card-cv ${className}`}>
@@ -11,7 +11,7 @@ const CardCV = ({nom, imglogo, titleName, description, className}) => {
                     <span>{nom}</span>
                 </div>
                 <div className='card-cv-card'>
-                    <img src={imglogo} alt="" />
+                    <img src={imglogo} alt={altimg} />
                     <h3>{titleName}</h3>
                     <p>{description}</p>
                 </div>

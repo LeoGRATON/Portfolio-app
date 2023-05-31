@@ -8,7 +8,6 @@ import Cursor from '../../Components/UI/Cursor';
 import { Helmet } from 'react-helmet'
 
 import '../../styles/index.scss'
-import imgarticle from '../../assets/BLOG/img-article-1.png'
 
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -87,12 +86,12 @@ const Blogs = () => {
                     <div className='blog-cards' key={blog.id}>
 
                     <div className='blog-card'>
-                        <div className='blog-card-img' style={{ backgroundImage: `url(${imgarticle})`}}>
+                        <div className='blog-card-img' style={{ backgroundImage: `url(/src/assets/BLOG/${blog.img_ref})`}}>
 
                         </div>
                         <p className='categorie'>{blog.category}</p>
                         <h2>{blog.titre}</h2>
-                        <p className='text'>{blog.text}</p>
+                        <p className='text'>{blog.text.slice(0, 287) + "..."}</p>
                         <a href={`/blogs/${blog.titre}`}><Moreinfo/></a>
                     </div>
                     </div>

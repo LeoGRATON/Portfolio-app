@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <header className={`hero ${isVisible ? 'visible' : ''}`}>
       <div>
-        <img src={imgLeo} alt="" />
+        <img src={imgLeo} alt='image de léo graton' />
       </div>
       
       <h1>

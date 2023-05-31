@@ -21,7 +21,6 @@ const Client = () => {
                 <SlideUpFadeIn height='2600'>
                 <ClientCard
                 iconCount={5}
-                imgSrc={`${image}/logo-1.svg`}
                 title='Création d’un interface de gestion de cuisine ou restaurant'
                 testimonial='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget ipsum in neque gravida dignissim. Pellentesque quam risus, facilisis nec dolor eget, semper ultrices velit. Integer luctus lobortis tortor ut pellentesque. Vivamus ultricies tortor mattis, vestibulum orci sit amet, vestibulum purus. Phasellus eget vulputate libero.'
                 imgClient={`${image}/client-exemple-1.png`} 
@@ -32,7 +31,6 @@ const Client = () => {
                 <SlideUpFadeIn height='2600'>
                 <ClientCard
                 iconCount={5}
-                imgSrc={`${image}/logo-2.svg`}
                 title='Réfection d’un site avec Wordpress avec création de maquette'
                 testimonial='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget ipsum in neque gravida dignissim. Pellentesque quam risus, facilisis nec dolor eget, semper ultrices velit. Integer luctus lobortis tortor ut pellentesque. Vivamus ultricies tortor mattis, vestibulum orci sit amet, vestibulum purus. Phasellus eget vulputate libero.'
                 imgClient={`${image}/client-exemple-2.png`}

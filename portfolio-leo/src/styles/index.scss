@@ -299,6 +299,34 @@ body{
         }
     }
 }
+.div-blog-img{
+    height: 500px;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+.div-blog-info{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.div-blog-content{
+    background-color: vars.$darky;
+    padding: 4rem;
+    border-radius: 5px;
+    width: 60%;
+    margin-bottom: 4rem;
+    h2{
+        font-family: 'Prata';
+        font-size: 24px;
+        padding-bottom: 1rem;
+    }
+    p{
+        font-weight: 300;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+}
 .blog{
     display: flex;
     gap: 1rem;

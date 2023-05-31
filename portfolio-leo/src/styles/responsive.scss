@@ -87,11 +87,20 @@
                 height: 23rem;
             }
     }
+    .footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
     .menu-burger{
         display: block !important;
+    }
+    .contact-section-title{
+        h2{
+            font-size: 42px;
+        }
     }
     .menu-list, .menu-list-active{
         display: none;
@@ -130,6 +139,9 @@
     }
     .selected-works-one-pagination{
         font-size: 50px;
+    }
+    .cards .card {
+        height: auto;
     }
 }
 @media screen and (max-width: 547px) {
@@ -191,6 +203,10 @@
     }
     .blog-input {
         flex-direction: column;
+    }
+    .div-blog-info{
+        flex-direction: column;
+        align-items: center;
     }
 }
 

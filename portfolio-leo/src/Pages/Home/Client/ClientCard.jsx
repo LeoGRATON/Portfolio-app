@@ -3,7 +3,7 @@ import Icon from 'react-eva-icons'
 import quote from '../../../assets/quote.svg'
 import '../../../styles/index.scss'
 
-const ClientCard = ({title, testimonial, imgClient, clientName, clientDescriptionName, iconCount}) => {
+const ClientCard = ({title, testimonial, imgClient, clientName, clientDescriptionName, iconCount, imgaltClient}) => {
 
     const icons = [];
 
@@ -25,12 +25,12 @@ const ClientCard = ({title, testimonial, imgClient, clientName, clientDescriptio
             </div>
             <h3>{title}</h3>
             <div className='client-card-text'>
-                <img src={quote} alt="" />
+                <img src={quote} alt="icon de citation" />
                 <p className='p-margin'>{testimonial}</p>
             </div>
             <div className='client-card-info'>
             <div>
-                <img src={imgClient} alt="" />
+                <img src={imgClient} alt="image du client" />
             </div>
             <div>
                 <p>{clientName}</p>

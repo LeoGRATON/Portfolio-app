@@ -91,7 +91,7 @@ const Work = () => {
         <div className='one-realistion-maquette'>
             <div className='one-realistion-maquette-img'>
                 <OpacityText height='2100'>
-                <img src={`/src/assets/REALISATONS/MAQUETTES/${work.img_maquette}`} alt='' />
+                <img src={`/src/assets/REALISATONS/MAQUETTES/${work.img_maquette}`} alt={`image de la maquette de ${work.titre}`} />
                 </OpacityText>
             </div>
         </div>

@@ -21,7 +21,7 @@ const AboutMe = () => {
             </div>
             <div className='about-section-quote'>
                 <SlideLeftFadeIn height='1500' className='about-section-quote-left'>
-                    <img src={quote} alt="" />
+                    <img src={quote} alt="icon de citation" />
                     <p>Je crois en une approche personnalisée pour chaque projet, ce qui garantit un site web unique et adapté à vos besoins spécifiques</p>
                 </SlideLeftFadeIn>
                 <SlideLeftFadeIn height='1500' className='about-section-quote-right'>

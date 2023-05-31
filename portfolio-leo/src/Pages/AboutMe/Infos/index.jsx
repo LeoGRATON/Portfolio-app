@@ -16,7 +16,7 @@ const Infos = () => {
         <div> 
             <div className='infos-about taille-grille'>
                 <div className='scrolling-image'>
-                    <img src={imgleo} alt="" />
+                    <img src={imgleo} alt="image de léo Graton" />
                 </div>
             <div>
                 <SlideUpFadeIn height='-100' className='infos-about-nom'>
@@ -26,7 +26,7 @@ const Infos = () => {
                 <p>Ce qui me passionne le plus dans le webdesign et le développement web, c'est la possibilité de créer des solutions innovantes qui peuvent avoir un impact positif sur les gens. Que ce soit en concevant une plateforme conviviale pour une entreprise, en développant une application qui facilite la vie quotidienne des utilisateurs, ou en créant un site web inspirant qui partage des idées et des connaissances, je trouve une immense satisfaction à contribuer à la transformation digitale.</p>
                 <div className='infos-about-link'>
                 <Link link='https://github.com/LeoGRATON' nom='Github' pseudo='LeoGRATON'/>
-                <Link link='#' nom='Instagram' pseudo='LeoGRATON'/>
+                <Link link='https://www.instagram.com/leogratonwebdesigner/' nom='Instagram' pseudo='LeoGRATON'/>
                 <Link link='https://www.linkedin.com/in/l%C3%A9o-graton-67940a193/' nom='Linkedin' pseudo='LeoGRATON'/>
                 </div>
                 </SlideUpFadeIn>
@@ -47,11 +47,13 @@ const Infos = () => {
                 />
                 <CardCV
                 imglogo={`${image}/logo-nc.png`}
+                altimg='logo de net concept'
                 titleName='ALTERNANCE - 2020 / 2022'
                 description='Création de webdesign pour des projets de siteweb. Création de site web sur Wordpress et autres création graphique. Intégration de site HTML / CSS'
                 />
                 <CardCV
                 imglogo={`${image}/logo-lpb.png`}
+                altimg='logo de les petits bilingues'
                 titleName='ALTERNANCE - 2019-2020'
                 className='card-cv-last'
                 description='Alternance pour le bachelor Webdesign & Webmarketing. Développement d’un site vitrine sous Wordpress, Création d’affiches design pour les événements de l’entreprise.'
@@ -61,16 +63,19 @@ const Infos = () => {
                 <CardCV
                 nom='Education'
                 imglogo={`/src/assets/icon-education.png`}
+                altimg='icon pour la section education'
                 titleName='FORMATION DEVELOPPEUR FULLSTACK JS - 6 mois (800h)'
                 description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula eget ligula sagittis, sed efficitur turpis egestas.  Nam sed mi eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
                 />
                 <CardCV
                 imglogo={`/src/assets/icon-education.png`}
+                altimg='icon pour la section education'
                 titleName='EXPERT UX / UI DESIGN - CONSULTANT MANAGMENT DE PROJET'
                 description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula eget ligula sagittis, sed efficitur turpis egestas.  Nam sed mi eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
                 />
                 <CardCV
                 imglogo={`/src/assets/icon-education.png`}
+                altimg='icon pour la section education'
                 titleName='BACHELOR WEBDESIGN'
                 description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula eget ligula sagittis, sed efficitur turpis egestas.  Nam sed mi eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
                 className='card-cv-last'

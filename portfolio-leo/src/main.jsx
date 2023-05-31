@@ -42,6 +42,10 @@ const router = createBrowserRouter([
     element: <Article />,
   },
   {
+    path: '/blogs/tendan',
+    element: <Article />,
+  },
+  {
     path: '/blogs',
     element: <Blogs />,
   },
