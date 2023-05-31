@@ -35,6 +35,14 @@
     justify-content: center;
     border-radius: 50%;
 }
+.link-about-icon:hover{
+    border: 1px solid vars.$white;
+    background-color: vars.$white;
+    transition: 0.3s ease-in-out;
+    svg{
+        fill:vars.$or;
+    }
+}
 .link-about-infos-nom{
     text-transform: uppercase;
     font-weight: 300;

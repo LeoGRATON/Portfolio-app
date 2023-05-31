@@ -84,3 +84,23 @@ form{
         gap: 1rem;
     }
 }
+
+.contact-message {
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .scrolling-text {
+    display: flex;
+    white-space: nowrap;
+    animation: scrollText 22s linear infinite;
+  }
+  
+  @keyframes scrollText {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }

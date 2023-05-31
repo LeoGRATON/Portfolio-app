@@ -3,6 +3,31 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&display=swap');
 
+.custom-cursor {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 2px solid vars.$or;
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .custom-cursor::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: vars.$or;
+  }
+  .custom-cursor.hovered {
+    color: #ff0000;
+  }
 
 .white{
     color: vars.$white !important;
@@ -15,6 +40,7 @@ body{
     background-color: vars.$dark;
     color: vars.$white;
     overflow-x: hidden;
+    cursor: none;
 }
 .taille-grille{
     width: 1442px;
@@ -110,6 +136,9 @@ body{
     }
 }
 
+.card-width{
+    width: 33%;
+}
 .cards{
     display: flex;
     gap: 1rem;
@@ -119,6 +148,7 @@ body{
         padding: 3rem;
         background-color: vars.$darky;
         border-radius: 5px;
+        height: 21rem;
         span{
             font-family: 'Prata';
             font-size: 24px;
@@ -210,8 +240,10 @@ body{
     img{
         width: 40px;
     }
-    p{
+    .p-margin{
         margin-top: -1.5rem;
+    }
+    p{
         font-size: 16px;
         font-weight: 300;
         line-height: 1.5;
@@ -356,6 +388,11 @@ body{
         font-size: 24px;
         text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
     }
+    .works-card-infos-right-icon:hover{
+        svg{
+            fill:vars.$dark;
+        }
+    }
 }
 
 // WORK
@@ -381,6 +418,7 @@ body{
     }
     p{
         text-transform: uppercase;
+        text-align: center;
     }
 }
 .one-realistion{
@@ -673,4 +711,33 @@ body{
   }
   .card.visible p::before {
     right: 0;
+  }
+
+  // POLITIQUE CONFIDENTIALITE - SITEMAP
+
+  .politique{
+    margin-top: 9rem;
+    h1{
+        font-size: 32px;
+        font-family: 'Prata';
+        padding-bottom: 2rem;
+    }
+    h2{
+        font-size: 24px;
+        font-family: 'Prata';
+        padding-bottom: 1rem;
+    }
+    p{
+        line-height: 1.5;
+        font-weight: 300;
+        padding-bottom: 2rem;
+    }
+    ul{
+        margin-bottom: 2rem;
+    }
+    li{
+        list-style: square;
+        font-weight: 300;
+        line-height: 1.5;
+    }
   }

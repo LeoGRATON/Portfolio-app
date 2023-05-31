@@ -2,11 +2,13 @@ import Menu from '../../Components/UI/Menu';
 import Contact from '../../Components/Contact'
 import Footer from '../../Components/Footer'
 import PageTitle from '../../Components/PageTitle';
+import Cursor from '../../Components/UI/Cursor';
 
 import { Helmet } from 'react-helmet'
 import Icon from 'react-eva-icons'
 import '../../styles/index.scss'
 import { useEffect, useState } from 'react';
+import { ToastContainer } from 'react-toastify';
 
 import axios from 'axios'
 
@@ -19,7 +21,7 @@ const Works = () => {
 
     useEffect(() => {
         axios
-          .get('http://api-portfolio-app.leo-graton.fr/works')
+          .get('https://api-portfolio-app.leo-graton.fr/works')
           .then(response => {
             setWorks(response.data);
           })
@@ -37,15 +39,17 @@ const Works = () => {
         <>
             <Helmet>
                 <title>Mes réalisations | LéoCreative Studio</title>
-                <meta name="description" content="Description de ma page" />
+                <meta name="description" content="Découvrez mes réalisations dans le domaine du webdesign et du développement web. Parcourez ma galerie pour voir des exemples de sites web que j'ai pu créer. Obtenez de l'inspiration et trouvez des idées pour votre prochain projet. Contactez-moi pour discuter de vos besoins en matière de conception et de développement web." />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="robots" content="index, follow" />
             </Helmet>
+            <ToastContainer/>
+            <Cursor/>
             <Menu/>
             <main>
             <PageTitle 
-            title='Works'
-            descriptionPage='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula eget ligula sagittis, sed efficitur turpis egestas. Nam sed mi eleifend. (Poppins)'
+            title='Mes réalisations'
+            descriptionPage='Explorez mes réalisations ! Découvrez mon portfolio inspirant et voyez notre expertise en action. Soyez inspiré par mes projets et imaginez les possibilités pour votre propre vision. Bienvenue dans ma galerie de réalisations !'
             />
              <div className='blog-input taille-grille'>
                 <div className='blog-input-content'>

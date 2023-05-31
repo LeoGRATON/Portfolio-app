@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
+import { ToastContainer } from 'react-toastify';
 
 import Menu from '../../Components/UI/Menu';
 import PageTitle from '../../Components/PageTitle';
@@ -13,6 +14,7 @@ import Loading from '../../Components/UI/Loading';
 import SlideUpFadeIn from '../../Components/Animation/SlidenUpFadeIn';
 import SlideLeftFadeIn from '../../Components/Animation/SlideLeftFadeIn';
 import OpacityText from '../../Components/Animation/OpacityText';
+import Cursor from '../../Components/UI/Cursor';
 
 const Work = () => {
   const { titre } = useParams();
@@ -20,7 +22,7 @@ const Work = () => {
 
   useEffect(() => {
     axios
-      .get('http://api-portfolio-app.leo-graton.fr/works')
+      .get('https://api-portfolio-app.leo-graton.fr/works')
       .then(response => {
         const foundWork = response.data.find(item => item.titre === titre);
         setWork(foundWork);
@@ -38,21 +40,21 @@ const Work = () => {
     <>
         <Helmet>
                 <title>{titre} | LéoCreative Studio</title>
-                <meta name="description" content="Description de ma page" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="robots" content="index, follow" />
             </Helmet>
+        <ToastContainer/>
+        <Cursor/>
         <Menu/>
         <main>
         <PageTitle 
             title={titre}
-            descriptionPage='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula eget ligula sagittis, sed efficitur turpis egestas. Nam sed mi eleifend. (Poppins)'
         />
         <SlideUpFadeIn height='-100'>
         <div className='work-info-cards'>
             <WorkInfo nomInfo='Client' children={work.titre}/>
             <WorkInfo nomInfo='Timeline' children={`${work.timeline}s`}/>
-            <WorkInfo nomInfo='Website' children={work.website}/>
+            <WorkInfo nomInfo='Website' children={<a href={`${work.website}`} target='_blank'>{work.website}</a>}/>
             <WorkInfo nomInfo='Category' children={work.category}/>
         </div>
         </SlideUpFadeIn>
@@ -94,7 +96,7 @@ const Work = () => {
             </div>
         </div>
         <div className='one-realistion-couleurs taille-grille'>
-            <SlideLeftFadeIn height='5900' className='one-realistion-couleurs-left'>
+            <SlideLeftFadeIn height='5400' className='one-realistion-couleurs-left'>
             <div className='one-realistion-couleurs-left-one' style={{ backgroundColor: `${work.couleurs.couleur1.hex}`}}>
             {work.couleurs.couleur1.nom}<br/>
             {work.couleurs.couleur1.hex}
@@ -112,7 +114,7 @@ const Work = () => {
             {work.couleurs.couleur4.hex}
             </div>
             </SlideLeftFadeIn>
-            <SlideUpFadeIn height='5900' className='one-realistion-couleurs-right'>
+            <SlideUpFadeIn height='5400' className='one-realistion-couleurs-right'>
                 <div>
                     <p>{work.typo1}</p>
                     <span>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz 1234567890 !$&)ç((-</span>

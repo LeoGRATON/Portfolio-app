@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../../styles/index.scss';
 import imgLeo from '../../assets/img-leo.png';
+import AppearTextInBackground from '../../Components/Animation/AppearTextInBackground';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,10 +15,13 @@ const Hero = () => {
       <div>
         <img src={imgLeo} alt="" />
       </div>
-      <h1 className={isVisible ? 'delayed-fade-in' : ''}>
-        Web designer
+      
+      <h1>
+        <AppearTextInBackground>
+        <span className='white poppins'>Web designer</span>
         <br />
         <span>& Developer</span>
+        </AppearTextInBackground>
       </h1>
     </header>
   );

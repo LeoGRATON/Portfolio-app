@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Animation.scss';
 
-const SlideUpFadeIn = ({ children, height, className }) => {
+const SlideUpFadeIn = ({ children, height, className, style }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const SlideUpFadeIn = ({ children, height, className }) => {
   }, [height]);
 
   return (
-    <div className={`${className} slide-up-fade-in ${isVisible ? 'active' : ''}`}>
+    <div className={`${className} slide-up-fade-in ${isVisible ? 'active' : ''}`} style={style}>
       {children}
     </div>
   );

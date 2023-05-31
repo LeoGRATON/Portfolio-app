@@ -1,26 +1,40 @@
+import React from 'react';
 import FormContact from './FormContact';
-import './style.scss'
+import './style.scss';
 
 const Contact = () => {
-
-    return (
-        <div className='contact'>
-            <div className='contact-message'>
-                <span className='contact-message-span'>LET’S MAKE YOUR WEBSITE       +++      LET’S MAKE YOUR WEBSITE       +++      LET’S MAKE YOUR WEBSITE       +++       LET’S MAKE YOUR WEBSITE       +++      LET’S MAKE YOUR WEBSITE       +++      LET’S MAKE YOUR WEBSITE       +++      LET’S MAKE YOUR WEBSITE       +++      </span>
-            </div>
-            <div className='contact-section'>
-                <div className='taille-grille'>
-                <div className='contact-section-title'>
-                    <h2>Let’s make<br/><span>your website</span></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed erat sem. Proin turpis est, lobortis in nisl ac.</p>
-                </div>
-                <div className='form'>
-                    <FormContact/>
-                </div>
-                </div>
-            </div>
+  return (
+    <div className="contact">
+      <div className="contact-message">
+        <div className="scrolling-text">
+          <span>
+            LET’S MAKE YOUR WEBSITE +++ LET’S MAKE YOUR WEBSITE +++ LET’S MAKE YOUR WEBSITE +++ LET’S MAKE YOUR WEBSITE +++LET’S MAKE YOUR WEBSITE +++ LET’S MAKE YOUR WEBSITE +++LET’S MAKE YOUR WEBSITE
+          </span>
         </div>
-    )
+        <div className="scrolling-text">
+          <span>
+            LET’S MAKE YOUR WEBSITE +++ LET’S MAKE YOUR WEBSITE +++ LET’S MAKE YOUR WEBSITE +++ LET’S MAKE YOUR WEBSITE +++LET’S MAKE YOUR WEBSITE +++ LET’S MAKE YOUR WEBSITE +++LET’S MAKE YOUR WEBSITE
+          </span>
+        </div>
+      </div>
+      <div className="contact-section">
+        <div className="taille-grille">
+          <div className="contact-section-title">
+            <h2>
+            Une aventure numérique <br />
+              <span>à mes côtés ?</span>
+            </h2>
+            <p>
+            Que ce soit pour discuter d'un projet, poser des questions ou simplement dire bonjour, je suis toujours ravi d'entendre parler de vous. N'hésitez pas à utiliser les informations de contact fournies ci-dessous pour me joindre. 
+            </p>
+          </div>
+          <div className="form">
+            <FormContact />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Contact;

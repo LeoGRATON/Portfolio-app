@@ -14,7 +14,7 @@ const AboutMe = () => {
             <div>
                 <div className='filigrane-about-me'>
                     <SlideUpFadeIn height='1400'>
-                    <h2>About me</h2>
+                    <h2>A propos</h2>
                     </SlideUpFadeIn>
                 </div>
                 <Cards/>
@@ -25,7 +25,7 @@ const AboutMe = () => {
                     <p>Je crois en une approche personnalisée pour chaque projet, ce qui garantit un site web unique et adapté à vos besoins spécifiques</p>
                 </SlideLeftFadeIn>
                 <SlideLeftFadeIn height='1500' className='about-section-quote-right'>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed erat sem. Proin turpis est, lobortis in nisl ac, vehicula lobortis erat. Etiam varius urna sit amet lectus feugiat viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed erat sem. Proin turpis est, lobortis in nisl ac, vehicula lobortis erat. Etiam varius urna sit amet lectus feugiat viverra. </p>
+                    <p>Le webdesign est pour moi une forme d'art numérique, où chaque ligne de code et chaque élément visuel sont soigneusement pensés pour créer une expérience utilisateur exceptionnelle. J'aime explorer les dernières tendances en matière de design, expérimenter avec des couleurs, des typographies et des mises en page afin de concevoir des interfaces modernes et attrayantes.</p>
                 </SlideLeftFadeIn>
             </div>
             <div className='about-section-btn'>

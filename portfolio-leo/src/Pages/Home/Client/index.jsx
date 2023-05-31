@@ -23,7 +23,7 @@ const Client = () => {
                 iconCount={5}
                 imgSrc={`${image}/logo-1.svg`}
                 title='Création d’un interface de gestion de cuisine ou restaurant'
-                testimonial='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget ipsum in neque gravida dignissim. Pellentesque quam risus, facilisis nec dolor eget, semper ultrices velit. Integer luctus lobortis tortor ut pellentesque. Vivamus ultricies tortor mattis, vestibulum orci sit amet, vestibulum purus. Phasellus eget vulputate libero. Proin accumsan libero sed nisl placerat, non placerat nisi rhoncus. '
+                testimonial='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget ipsum in neque gravida dignissim. Pellentesque quam risus, facilisis nec dolor eget, semper ultrices velit. Integer luctus lobortis tortor ut pellentesque. Vivamus ultricies tortor mattis, vestibulum orci sit amet, vestibulum purus. Phasellus eget vulputate libero.'
                 imgClient={`${image}/client-exemple-1.png`} 
                 clientName='John Doe'
                 clientDescriptionName='Entrepreneur chez Cuist’o'
@@ -34,16 +34,16 @@ const Client = () => {
                 iconCount={5}
                 imgSrc={`${image}/logo-2.svg`}
                 title='Réfection d’un site avec Wordpress avec création de maquette'
-                testimonial='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget ipsum in neque gravida dignissim. Pellentesque quam risus, facilisis nec dolor eget, semper ultrices velit. Integer luctus lobortis tortor ut pellentesque. Vivamus ultricies tortor mattis, vestibulum orci sit amet, vestibulum purus. Phasellus eget vulputate libero. Proin accumsan libero sed nisl placerat, non placerat nisi rhoncus. '
+                testimonial='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget ipsum in neque gravida dignissim. Pellentesque quam risus, facilisis nec dolor eget, semper ultrices velit. Integer luctus lobortis tortor ut pellentesque. Vivamus ultricies tortor mattis, vestibulum orci sit amet, vestibulum purus. Phasellus eget vulputate libero.'
                 imgClient={`${image}/client-exemple-2.png`}
                 clientName='Marie Doe'
                 clientDescriptionName='Créatrice de mode'
                 />
                 </SlideUpFadeIn>
             </div>
-            <div className='about-section-btn'>
+            {/* <div className='about-section-btn'>
                 <Button children='Voir tous mes avis'/>
-            </div>
+            </div> */}
         </div>
     )
 };

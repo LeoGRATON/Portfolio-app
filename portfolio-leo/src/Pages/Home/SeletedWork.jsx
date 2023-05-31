@@ -17,7 +17,7 @@ const SelectedWork = () => {
 
   useEffect(() => {
     axios
-      .get('http://api-portfolio-app.leo-graton.fr/works')
+      .get('https://api-portfolio-app.leo-graton.fr/works')
       .then(response => {
         setWorks(response.data);
         setIsLoading(false);
@@ -64,18 +64,17 @@ const SelectedWork = () => {
         <>
       <div className={`selected-works-title taille-grille`}>
         <div>
-          <h2>Selected Works</h2>
+          <h2>Mes réalisations</h2>
           <p>Une sélection non exhaustives de mes réalisations</p>
         </div>
         <a href='/works'>
-          <Button children='All Works' />
+          <Button children='Toutes mes réalisations' />
         </a>
       </div>
       <div>
         {works.slice(0, 4).map((work, index) => (
-          <Link to={`/works/${work.titre}`} key={work.id}>
-          <div className={`selected-works-full`} >
-          <div
+          <div className={`selected-works-full`} key={work.id}>
+          <a href={`/works/${work.titre}`}><div
           className='selected-works-one taille-grille'
           key={work.id}
           onMouseMove={handleMouseMove}
@@ -87,9 +86,8 @@ const SelectedWork = () => {
             <p>{work.category}</p>
           </div>
           <p className='selected-works-one-pagination'>{`/0${index + 1}`}</p>
+          </div></a>
           </div>
-          </div>
-          </Link>
         ))}
       </div>
       {hoveredImage && (

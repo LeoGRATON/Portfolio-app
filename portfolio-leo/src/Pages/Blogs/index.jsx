@@ -3,6 +3,7 @@ import Contact from '../../Components/Contact'
 import Footer from '../../Components/Footer'
 import PageTitle from '../../Components/PageTitle';
 import Moreinfo from '../../Components/UI/Moreinfo'
+import Cursor from '../../Components/UI/Cursor';
 
 import { Helmet } from 'react-helmet'
 
@@ -23,7 +24,7 @@ const Blogs = () => {
 
     useEffect(() => {
         axios
-          .get('http://api-portfolio-app.leo-graton.fr/blogs')
+          .get('https://api-portfolio-app.leo-graton.fr/blogs')
           .then(response => {
             setBlogs(response.data);
           })
@@ -42,15 +43,16 @@ const Blogs = () => {
         <>
             <Helmet>
                 <title>Blog | LéoCreative Studio</title>
-                <meta name="description" content="Description de ma page" />
+                <meta name="description" content="Bienvenue sur mon blog dédié au webdesign et au développement web. Découvrez nos articles informatifs, astuces et conseils pour améliorer votre présence en ligne. Explorez des sujets tels que les dernières tendances du design, les meilleures pratiques de développement web, les stratégies de référencement et bien plus encore." />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="robots" content="index, follow" />
             </Helmet>
+            <Cursor/>
             <Menu/>
             <main>
             <PageTitle 
             title='Blog'
-            descriptionPage='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ligula eget ligula sagittis, sed efficitur turpis egestas. Nam sed mi eleifend. (Poppins)'
+            descriptionPage='Bienvenue sur notre blog dédié au webdesign et au développement, où je partage des astuces et conseils pratiques. Plongez dans mon univers pour découvrir des articles inspirants et des ressources utiles pour améliorer vos compétences et rester à jour dans le domaine du web. Rejoignez-nous pour une expérience enrichissante et stimulante !'
             />
             <div className='blog-input taille-grille'>
                 <div className='blog-input-content'>

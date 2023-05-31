@@ -9,6 +9,7 @@ import PageTitle from '../../Components/PageTitle';
 import Contact from '../../Components/Contact';
 import Footer from '../../Components/Footer';
 import Loading from '../../Components/UI/Loading';
+import Cursor from '../../Components/UI/Cursor';
 
 
 const Work = () => {
@@ -40,10 +41,10 @@ console.log(finalTitle)
     <>
         <Helmet>
                 <title>{titre} | LéoCreative Studio</title>
-                <meta name="description" content="Description de ma page" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="robots" content="index, follow" />
-            </Helmet>
+        </Helmet>
+        <Cursor/>
         <Menu/>
         <main>
         <PageTitle 

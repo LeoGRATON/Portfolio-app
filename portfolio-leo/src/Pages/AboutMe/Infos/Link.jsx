@@ -1,12 +1,12 @@
 import Icon from 'react-eva-icons'
 import './style.scss'
 
-const Link = ({nom, pseudo}) => {
+const Link = ({nom, pseudo, link}) => {
 
     return (
         <div className='link-about'> 
             <div className='link-about-icon'>
-            <a href="#">
+            <a href={link} target='_blank'>
             <Icon 
                 name="link-2-outline"
                 size="medium"     // small, medium, large, xlarge

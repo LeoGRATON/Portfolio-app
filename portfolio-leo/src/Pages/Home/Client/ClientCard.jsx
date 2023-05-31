@@ -26,7 +26,7 @@ const ClientCard = ({title, testimonial, imgClient, clientName, clientDescriptio
             <h3>{title}</h3>
             <div className='client-card-text'>
                 <img src={quote} alt="" />
-                <p>{testimonial}</p>
+                <p className='p-margin'>{testimonial}</p>
             </div>
             <div className='client-card-info'>
             <div>
